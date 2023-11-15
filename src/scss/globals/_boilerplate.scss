@@ -1,0 +1,59 @@
+@use "../util/functions" as u;
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding-inline: 4%;
+  background-color: var(--very-pale-blue);
+  background-image: url("/assets/pattern-circles.svg"),
+    url("/assets/bg-pattern.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: 50% 10%, 50% 0%;
+
+  @media (max-width: 600px) {
+    background-position: 50% 3%, 50% 0%;
+  }
+}
+#root {
+  @media (max-width: 600px) {
+    width: 92%;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
+  h1 {
+    font-size: 1.7rem;
+    text-align: center;
+    color: var(--dark-desaturated-blue);
+
+    span {
+      display: block;
+      text-align: center;
+      color: var(--grayish-blue);
+      font-size: u.rem(15);
+      margin-top: 1rem;
+    }
+  }
+}
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
