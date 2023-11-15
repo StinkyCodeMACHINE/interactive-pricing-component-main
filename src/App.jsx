@@ -81,6 +81,7 @@ function App() {
               value={input.slider}
               onChange={sliderChanged}
             />
+            <label htmlFor="slider">slider</label>
           </div>
 
           <div className="form__top-things__side-options">
